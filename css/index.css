@@ -1,0 +1,19 @@
+*{
+	overflow: hidden;
+}
+
+.monte-de-seta{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.seta{
+	/*! width: 50px; */
+	height: 58px;
+	/*! position: unset; */
+	margin-left: 64px;
+	margin-top: 30px;
+	transform: rotate(45deg);
+}
+
