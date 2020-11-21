@@ -15,7 +15,7 @@ function regularImagem(event){
 			var deltaY = y - Sy
 
 			var D = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2))/1380
-			var escala = 1 + (1-D)
+			var escala = (1-D)
 			var angulo =  Math.atan2(deltaY, deltaX) //+ Math.PI 
 
 			// console.log(angulo)
