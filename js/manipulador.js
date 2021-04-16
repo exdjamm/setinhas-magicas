@@ -1,7 +1,6 @@
 let setas = document.querySelectorAll('.seta')
 
 function regularImagem(event){
-
 	var x = event.clientX
 	var y = event.clientY
 
@@ -34,4 +33,10 @@ function regularImagem(event){
 	)
 }
 
+function regularImagemTouch(event){
+	touch = event.changedTouches[0]
+	regularImagem(touch)
+}
+
 document.querySelector('.monte-de-seta').addEventListener("mousemove", regularImagem)
+document.querySelector('.monte-de-seta').addEventListener("touchmove", regularImagemTouch)
