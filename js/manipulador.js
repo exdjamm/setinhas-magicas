@@ -1,8 +1,8 @@
 let setas = document.querySelectorAll('.seta')
 
 function regularImagem(event){
-	var x = event.clientX
-	var y = event.clientY
+	var x = event.pageX
+	var y = event.pageY
 
 	setas.forEach(
 		seta => {
