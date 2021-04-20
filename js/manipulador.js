@@ -1,8 +1,10 @@
 let setas = document.querySelectorAll('.seta')
+let offsetY = 0
+let offsetX = 0
 
 function regularImagem(event){
-	var x = event.pageX
-	var y = event.pageY
+	var x = event.clientX - offsetX
+	var y = event.clientY - offsetY
 
 	setas.forEach(
 		seta => {
@@ -33,10 +35,16 @@ function regularImagem(event){
 	)
 }
 
+const setOffSet = e => {
+       offsetY = e.pageY
+       offsetX = e.pageX
+}
+
 function regularImagemTouch(event){
 	touch = event.changedTouches[0]
 	regularImagem(touch)
 }
 
 document.querySelector('.monte-de-seta').addEventListener("mousemove", regularImagem)
+document.querySelector('.monte-de-seta').addEventListener("touchstart", setOffSet)
 document.querySelector('.monte-de-seta').addEventListener("touchmove", regularImagemTouch)
