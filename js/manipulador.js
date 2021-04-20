@@ -3,8 +3,8 @@ let offsetY = 0
 let offsetX = 0
 
 function regularImagem(event){
-	var x = event.clientX - offsetX
-	var y = event.clientY - offsetY
+	var x = event.clientX + offsetX
+	var y = event.clientY + offsetY
 
 	setas.forEach(
 		seta => {
